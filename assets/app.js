@@ -120,15 +120,46 @@
       }).join('') + '</dl><a class="btn" href="#/index" style="margin-top:32px">Back to the index ' + ARROW + '</a>';
   }
 
+  // ---------- app-style navigation ----------
+  // `trail` is the list of screens visited in this session, so Back retraces
+  // the visitor's own path. If they arrived directly (e.g. a QR or shared link),
+  // Back goes up a level instead: page -> index -> landing.
+  var backBtn = document.getElementById('back');
+  var trail = [];
+  var first = true;
+
+  function current() { var h = location.hash.replace(/^#\/?/, ''); return h ? '#/' + h : '#/'; }
+  function parentOf(hash) {
+    var h = hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+    if (!h.length) return null;
+    if (h[0] === 'index') return '#/';
+    return '#/index'; // pathway pages and credits
+  }
+  backBtn.addEventListener('click', function () {
+    if (trail.length > 1) { history.back(); return; }
+    var up = parentOf(current());
+    if (up) { trail = []; goingBack = true; location.replace(up); }
+  });
+  var goingBack = false;
+
   // ---------- router ----------
   function route() {
-    var h = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean), html, active = null, title = DATA.project.title;
+    var here = current(), dir;
+    if (goingBack) { dir = 'bwd'; goingBack = false; trail.push(here); }
+    else if (trail.length > 1 && trail[trail.length - 2] === here) { dir = 'bwd'; trail.pop(); }
+    else if (trail[trail.length - 1] !== here) { dir = 'fwd'; trail.push(here); }
+    else { dir = 'fwd'; }
+
+    var h = here.replace(/^#\/?/, '').split('/').filter(Boolean), html, active = null, title = DATA.project.title;
     if (h[0] === 'index') { html = index(); title = 'Index · ' + title; }
     else if (h[0] === 'credits') { html = credits(); title = 'Credits · ' + title; }
     else if (h[0] === 'p' && findPath(h[1])) { var p = findPath(h[1]); active = p.slug; html = pathwayPage(p, h[2]); title = p.title + ' · ' + title; }
     else { html = landing(); }
-    main.classList.remove('enter'); void main.offsetWidth;
-    main.innerHTML = html; main.classList.add('enter');
+
+    main.classList.remove('fwd', 'bwd', 'first'); void main.offsetWidth;
+    main.innerHTML = html; main.classList.add(first ? 'first' : dir);
+    first = false;
+    backBtn.hidden = !h.length; // no Back on the landing screen
     document.title = title + ' · Kerry Lemon';
     renderSide(active);
     window.scrollTo(0, 0);

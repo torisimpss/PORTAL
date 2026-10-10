@@ -33,11 +33,29 @@ a { color: inherit; }
 .shell { min-height: 100vh; display: flex; }
 .side { display: none; }
 .col { flex: 1; min-width: 0; }
-.topbar { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 16px var(--gutter) 12px; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); }
-.kerry img { height: 24px; width: auto; }
-.indexlink { font-size: 12px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; text-decoration: none; padding: 8px 0 8px 12px; }
-main { padding: 24px var(--gutter) 56px; max-width: 720px; outline: none; }
-main.enter > * { animation: fadeUp .45s var(--ease) both; }
+/* app-style header: Back · Kerry Lemon · Index */
+.topbar { position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: max(12px, env(safe-area-inset-top)) 14px 10px; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.kerry { justify-self: center; display: block; padding: 6px; }
+.kerry img { height: 22px; width: auto; }
+.indexlink { justify-self: end; font-size: 12px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; text-decoration: none; padding: 12px 10px; }
+.back { justify-self: start; display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; font: inherit; font-size: 14px; font-weight: 500; color: var(--ink); padding: 10px 10px 10px 6px; margin: 0; cursor: pointer; border-radius: 999px; min-height: 44px; transition: background .15s, transform .15s var(--ease); }
+.back svg { width: 9px; height: 15px; }
+.back:hover { background: var(--soft); }
+.back:active { transform: scale(.96); background: var(--soft); }
+.back[hidden] { display: inline-flex; visibility: hidden; }
+main { padding: 24px var(--gutter) calc(56px + env(safe-area-inset-bottom)); max-width: 720px; outline: none; }
+/* screen transitions: forward slides in from the right, back slides in from the left */
+main.fwd { animation: inRight .38s var(--ease) both; }
+main.bwd { animation: inLeft .38s var(--ease) both; }
+main.first > * { animation: fadeUp .45s var(--ease) both; }
+@keyframes inRight { from { opacity: 0; transform: translateX(36px); } to { opacity: 1; transform: none; } }
+@keyframes inLeft { from { opacity: 0; transform: translateX(-36px); } to { opacity: 1; transform: none; } }
+/* app feel */
+html, body { overscroll-behavior-y: none; }
+a, button { -webkit-tap-highlight-color: transparent; }
+.btn, .rows a, .more a, .resume, .tabs a, .indexlink { touch-action: manipulation; }
+.rows a:active, .more a:active { background: var(--soft); }
+.shell { min-height: 100dvh; overflow-x: clip; }
 
 /* type */
 .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--grey); margin: 0 0 8px; display: flex; align-items: center; gap: 8px; }
@@ -141,10 +159,9 @@ th { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: u
   .side a.row[aria-current="page"] { background: var(--soft); font-weight: 600; }
   .side a.row:hover { background: var(--soft); }
   .side .foot { display: block; margin: 24px 12px 0; font-size: 12px; color: var(--grey); }
-  .topbar .kerry { visibility: hidden; }
-  .topbar .indexlink { display: none; }
-  .topbar { border-bottom: 0; background: transparent; backdrop-filter: none; position: static; padding: 0; height: 0; }
-  main { padding: 64px 80px 80px; max-width: 980px; }
+  .topbar .kerry, .topbar .indexlink { visibility: hidden; }
+  .topbar { border-bottom: 0; background: rgba(255,255,255,.96); padding: 24px 66px 0; }
+  main { padding: 28px 80px 80px; max-width: 980px; }
   .page-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; }
   .page-grid .media { order: 2; }
   .page-grid .copy { order: 1; }
