@@ -1,0 +1,160 @@
+{
+  "project": {
+    "title": "PORTAL",
+    "artist": "Kerry Lemon",
+    "kind": "Public sculpture",
+    "year": "2026",
+    "homeUrl": "https://www.kerrylemon.co.uk/"
+  },
+  "landing": {
+    "illustration": "Illustration of PORTAL by Sabrina — to be added after final design sign-off (expected October)",
+    "caption": "Illustration of PORTAL by Sabrina",
+    "about": "PORTAL is a playful granite bench inspired by the historic boundary of Croydon Common. Its form transforms a line on a map into a place to sit, touch, gather and play. Created with pupils from Ark Oval Primary School, its surface celebrates dandelions, daisies, blackberries and buttercups, with sandblasted drawings designed for making rubbings.",
+    "intro": "This is an interactive experience to accompany the PORTAL sculpture. Click any of the pathways to learn more about the sculpture, artist, and surrounding nature. This experience allows us to show you all the content and material to enrich your experience of the sculpture and its story."
+  },
+  "pathways": [
+    {
+      "slug": "about-kerry",
+      "title": "About Kerry",
+      "colour": "teal",
+      "pages": [
+        {
+          "slug": "about-kerry",
+          "title": "About Kerry",
+          "blocks": [
+            { "type": "text", "text": "Hello, I’m Kerry - an artist making sculptures inspired by nature. I’ve created over 100 public artworks across the UK, rooted in local plants, animals and landscapes. Through careful research and sculptural storytelling, I invite people to notice the quiet magic of the natural world and consider how we care for it." },
+            { "type": "link", "label": "Explore more of my work on my website", "url": "https://www.kerrylemon.co.uk/" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ark-oval",
+      "title": "Ark Oval",
+      "colour": "lilac",
+      "pages": [
+        {
+          "slug": "ark-oval",
+          "title": "Ark Oval Primary School",
+          "blocks": [
+            { "type": "image", "placeholder": "Photos from the Ark Oval workshop — to be added" },
+            { "type": "text", "text": "In February 2026, artist Kerry Lemon spent time with Year 4 pupils at Ark Oval Primary School, exploring the ecological importance of dandelions and creating hand-drawn dandelion lanterns. Kerry shared her ideas for the artwork and invited the pupils to choose plants to be drawn and permanently sandblasted onto the bench. Their contribution is acknowledged within the surface design: “Plants chosen with Year 4 pupils at Ark Oval Primary School, 2026.” The pupils chose a range of 'playable' plants associated with childhood which now adorn the bench; dandelion, daisy, blackberry and buttercup for visitors to make rubbings." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "playful-plants",
+      "title": "Playful plants",
+      "colour": "sky",
+      "pages": [
+        {
+          "slug": "playful-plants",
+          "title": "Playful plants",
+          "blocks": [
+            { "type": "placeholder", "text": "Content to come: a short text explaining how each plant (dandelion, daisy, blackberry and buttercup) can be played with. Being designed by Tori and Harry." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "rubbing",
+      "title": "How to do a rubbing",
+      "colour": "navy",
+      "pages": [
+        {
+          "slug": "rubbing",
+          "title": "How to do a rubbing",
+          "blocks": [
+            { "type": "placeholder", "text": "Content to come: the existing “How to do a rubbing” resource." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "croydon-common",
+      "title": "Croydon Common",
+      "colour": "pink",
+      "pages": [
+        {
+          "slug": "croydon-common",
+          "title": "Croydon Common",
+          "blocks": [
+            { "type": "text", "text": "This new artwork stands near one of the former gates to Croydon Common. Its portal-like opening reflects the historic boundary and the historic line is reflected in the sandblasted detail. The Common covered around 280 acres of shared land, where local people could graze animals, collect firewood and gather natural materials. In 1801, it was divided into private plots, removing rights and access that many people had relied on for generations." },
+            { "type": "link", "label": "You can find out more here", "url": "https://eastcroydon.org.uk/the-croydon-enclosure-1787-1801-as-it-affected-east-croydon/" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "drawing-to-stone",
+      "title": "From drawing to stone",
+      "colour": "teal",
+      "pages": [
+        {
+          "slug": "drawing-to-stone",
+          "title": "From drawing to stone",
+          "blocks": [
+            { "type": "placeholder", "text": "Content to come (January 2027): the school pack from the second visit to Ark Oval Primary, including photos and a short fabrication film." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "made-with-croydon",
+      "title": "Made with Croydon",
+      "colour": "lilac",
+      "pages": [
+        {
+          "slug": "made-with-croydon",
+          "title": "Made with Croydon",
+          "blocks": [
+            { "type": "text", "text": "PORTAL was developed with and for the local community through an extensive process of research, consultation and creative collaboration. I am deeply grateful to Ark Oval Primary School, the local Community Design Panel, TURF Studios, Conditions Studio and Croydon Local Associate Artist Jenny Camp for their ideas and contributions. The artwork was also informed by research through the Museum of Croydon and Croydon Archives; dialogue with a local historian and community voices connected to ECCO; and consultation with the Croydon Natural History and Scientific Society and ACCS on local flora. Croydon Council’s Community and Conservation Team Leader, Interim Parks Development Manager and Greenspace Information for Greater London provided further guidance on local ecology and species records. The chart below shows how local knowledge influenced each stage of the design process. I am indebted to everyone who generously shared their time, experience and advice in the making of this collaborative artwork." }
+          ]
+        },
+        {
+          "slug": "you-said-i-changed",
+          "title": "You said, I changed",
+          "blocks": [
+            { "type": "note", "text": "This design log will be fully updated by January 2027." },
+            {
+              "type": "table",
+              "columns": ["Stage", "Community feedback", "Project change"],
+              "rows": [
+                ["Stage 1", "Children selected plants connected to everyday childhood play", "Artwork now includes blackberries, daisies, dandelions and buttercups"],
+                ["Stage 1", "Local history feedback identified Croydon Common and boundaries", "The sculpture form clearly references the former boundary/gate"],
+                ["Stage 2", "A visually impaired participant welcomed the tactile qualities", "Tactile sandblasted surfaces and rubbable motifs will be expanded over sides of artwork not just top surface"],
+                ["Stage 2", "Concerns around scale and legibility of the sandblasted imagery", "Motifs will be tested at full scale before final artworking"],
+                ["Stage 3", "Mentee Jenny suggested “Could sandblasting include diagram of boundary line taken from maps? (Angela to advise)”", "Design updated to include boundary/ gateway to Croydon Common"]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "associate-artist",
+      "title": "Associate artist",
+      "colour": "sky",
+      "pages": [
+        {
+          "slug": "associate-artist",
+          "title": "Associate artist: Jenny Camp",
+          "blocks": [
+            { "type": "image", "placeholder": "Photo of Jenny Camp — to be added" },
+            { "type": "text", "text": "Jenny Camp is an artist based at the CONDITIONS studio programme in Croydon. In this paid role, she supported the project’s design and fabrication and helped translate the process into a creative workshop at Ark Oval Primary School. Her involvement celebrates local creative labour and creates a practical skills legacy for Croydon." },
+            { "type": "link", "label": "Find out more about Jenny", "url": "https://jennycamp.co.uk/" }
+          ]
+        }
+      ]
+    }
+  ],
+  "credits": [
+    { "role": "Client", "name": "Formation Design & Build" },
+    { "role": "Croydon local associate artist", "name": "Jenny Camp", "url": "https://jennycamp.co.uk/" },
+    { "role": "QR team", "name": "Tori Simpson and Harry Hosker" },
+    { "role": "Fabricators", "name": "Scribble Stone Inspire", "url": "https://scribblestoneinspire.com/" },
+    { "role": "Additional thanks to", "name": "Ark Oval Primary School, Local Community Design Panel, TURF Studios, Conditions Studio, Museum of Croydon, Croydon Archives, Local historian, Community voices connected to ECCO, Croydon Natural History and Scientific Society, Southern Housing, ACCS, Croydon Council Community and Conservation Team Leader, Croydon Council Interim Parks Development Manager, Greenspace Information for Greater London" },
+    { "role": "Photography credit", "name": "Emma Brown", "url": "https://www.emmabrownphotography.com/" }
+  ]
+}
